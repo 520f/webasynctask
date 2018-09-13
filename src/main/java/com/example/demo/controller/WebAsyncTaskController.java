@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.thread.MyExecutor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
@@ -9,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.async.WebAsyncTask;
 
 /**
+ *
  * 描述：springboot中替代servlet3.0异步请求的解决方案
  *                   新的解决方案使用线程池也特别方便
  * User:xuyalun
@@ -16,7 +16,7 @@ import org.springframework.web.context.request.async.WebAsyncTask;
  * Time 10:41
  *
  * remark：
- *      case 1 :任务处理时间5s,不超时，打开39,39行注释
+ *      case 1 :任务处理时间5s,不超时，打开38,39行注释
  *      case 2 :任务抛出异常 顺利执行，打开42,43行注释
  *      case 3 :任务执行超时 ，打开46,47行注释
  *      加强版：使用线程池，打开 35行的行内注释
